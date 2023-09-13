@@ -121,6 +121,50 @@ a {
     margin-bottom: 5px;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    height: 19px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-text {
+    margin-right: 2rem;
+}
+
+.nav-text, .logo {
+    padding-top: 1rem;
+}
+
+.nav-text:hover {
+    border-top: #0065FC solid 0.1rem;
+    color: #0065FC;
+}
+
+.filtres-container {
+    display: flex;
+}
+
+.filtres-detail {
+    display: flex;
+}
+
+.filtre {
+    display: block;
+    border: #D9D9D9 solid 2px;
+    border-radius: 25px;
+    height: 50px;
+    width: 134px;
+    padding: 4px, 19px, 4px, 19px;
+    margin: 0 15px 0 15px;
+}
 
 
 
