@@ -34,10 +34,14 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .section-title {
-    margin: 0;
+    margin: 0.75rem 0 1.5rem 0;
     font-size: 22px;
-    border: red solid 1px;
 }
 
 .card {
@@ -47,12 +51,19 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
+.card {
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
     object-fit: cover;
 }
 
 .card-title {
     font-size: 16px;
+    font-weight: 700;
 }
 
 .euro {
@@ -61,6 +72,41 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/****** En-tête ******/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+}
+
+.logo {
+    display: block;
+    height: 19px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-text {
+    margin-right: 2rem;
+    border-top: transparent solid 0.1rem;
+}
+
+.nav-text, .logo {
+    padding-top: 0.5rem;
+}
+
+.nav-text:hover {
+    border-top: #0065FC solid 0.1rem;
+    color: #0065FC;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -72,7 +118,8 @@ a {
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+    padding: 1.5rem;
+    padding-bottom: 0;
     box-sizing: border-box;
 }
 
@@ -81,16 +128,119 @@ a {
     width: 65%;
 }
 
+/* Recherche Hébergement */
+
+.recherche-hebergement {
+    margin-bottom: 1.2rem;
+}
+
+.form-city-search {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0 1rem 0;
+    align-items: center; 
+    border-radius: 1rem;
+}
+
+.localisation {
+    width: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #F2F2F2;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.submit-city-search, .field-city-search {
+    margin: 0;
+}
+
+.field-city-search {
+    border: #F2F2F2 solid 1px;
+    border-left: none;
+    border-right: none;
+    padding-left: 0.75rem;
+    width: 10rem;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 3rem;
+}
+
+.submit-city-search {
+    background-color: #0065FC;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem 0 1rem;
+    height: 3.25rem;
+}
+
+.filtres {
+    font-size: 1.1rem;
+}
+
+.filtres-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.filtres-detail {
+    display: flex;
+}
+
+.filtre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #D9D9D9 solid 0.1rem;
+    border-radius: 25px;
+    height: 40px;
+    padding: 4px, 19px, 4px, 19px;
+    margin: 0 0 0 15px;
+}
+
+.filtre:hover {
+    background-color: #DEEBFF;
+}
+
+.filtre > i {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.filtre > span {
+    padding-right: 1rem;
+}
+
+.info-nombre-logements {
+    display: flex;
+    align-items: center;
+    padding-top: 1.1rem;
+}
+
+.fa-info {
+    border: #D9D9D9 solid 1px;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    padding-top: 3px;
+    font-size: 0.8rem;
+}
+
+/* Hébergements, Cartes */
+
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid blue;
     justify-content: space-between;
+    font-size: 0.8rem;
 }
 
 .hebergements-cards a {
-    width: 30%;
-    margin: 1.5rem 0 1.5rem 0;
+    margin-bottom: 1.25rem;
+    width: 32%
 }
 
 .hebergements-cards img {
@@ -100,11 +250,25 @@ a {
     border-top-right-radius: 20px;
 }
 
-.afficher-plus {
-    border: red solid 1px;
+.hebergements-cards .card-subtitle {
+    padding: 0.3rem 0 0.3em 0;
+}
+
+.hebergements-cards .card-title, .hebergements-cards .card-subtitle {
     margin: 0;
-    font-size: 18px;
+}
+
+.hebergements-cards .card-content {
+    margin: 0.25rem 0 0 0.5rem;
+}
+
+.afficher-plus {
+    font-size: 1.1rem;
     font-weight: 700;
+}
+
+.center {
+    text-align: center;
 }
 
 /****** Populaires ***********/
@@ -120,7 +284,7 @@ a {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-bottom: 1.5rem;
 }
 
 .populaires-cards img {
@@ -151,122 +315,58 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    display: block;
-    height: 19px;
-}
-
-nav {
-    display: flex;
-}
-
-.nav-text {
-    margin-right: 2rem;
-}
-
-.nav-text, .logo {
-    padding-top: 1rem;
-}
-
-.nav-text:hover {
-    border-top: #0065FC solid 0.1rem;
-    color: #0065FC;
-}
-
-.filtres-container {
-    display: flex;
-}
-
-.filtres-detail {
-    display: flex;
-}
-
-.filtre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #D9D9D9 solid 0.1rem;
-    border-radius: 25px;
-    height: 50px;
-    padding: 4px, 19px, 4px, 19px;
-    margin: 0 15px 0 15px;
-}
-
-.filtre > i {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.filtre > span {
-    padding-right: 1rem;
-}
-
-.info-nombre-logements {
-    display: flex;
-    align-items: center;
-}
-
-.fa-info {
-    border: #D9D9D9 solid 1px;
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    line-height: 100%;
-    margin-right: 0.5rem;
-}
-
 .center {
     text-align: center;
 }
 
-.champ-recherche-ville {
+/****** Activités ***********/
+
+#activites {
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.activites-cards {
     display: flex;
-    justify-content: flex-start;
-    margin: 1rem 0 1rem 0;
-    align-items: center; 
-    border-radius: 1rem;
-    width: 23rem;
+    justify-content: space-between;
 }
 
-.localisation {
-    width: 1rem;
-    padding: 1rem 1rem 1rem 1rem;
-    background-color: #F2F2F2;
-    border-radius: 1rem 0 0 1rem;
+.activites-cards .card {
+    width: 300px;
+    height: 450px;
+    padding: 0;
+    margin: 0 0.1rem 0 0.1rem;
 }
 
-.submit-city-search, .field-city-search {
+.activites-cards img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 88%;
+    width: 100%;
+
+}
+
+.activites-cards .card-title {
+    margin: 1rem 0 1rem 1rem;
+}
+
+/********* Footer ********/
+
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    padding: 1rem;
+}
+
+footer h3 {
+    font-size: 1rem;
     margin: 0;
-    border: none;
-    height: 3rem;
 }
 
-.field-city-search {
-    border-top: #F2F2F2 solid 0.05rem;
-    border-bottom: #F2F2F2 solid 0.05rem;
+footer li {
+    padding-bottom: 0.75rem;
+    margin: 0 15rem 0 2rem;
 }
-
-.submit-city-search {
-    background-color: #0065FC;
-    border: solid 0.1rem #0065FC;
-    color: white;
-    font-size: 1.1rem;
-    text-align: center;
-    font-weight: 700;
-    border-radius: 0 1rem 1rem 0;
-    padding: 0 1rem 0 1rem;
-}
-
-.filtres {
-    font-size: 1.1rem;
-}
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
