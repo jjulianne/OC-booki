@@ -13,6 +13,10 @@
     color: var(--main-color);
 }
 
+.fa-location-dot {
+    color: black;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -33,6 +37,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    border: red solid 1px;
 }
 
 .card {
@@ -74,6 +79,32 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid blue;
+    justify-content: space-between;
+}
+
+.hebergements-cards a {
+    width: 30%;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.hebergements-cards img {
+    width: 99%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.afficher-plus {
+    border: red solid 1px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /****** Populaires ***********/
@@ -157,15 +188,84 @@ nav {
 }
 
 .filtre {
-    display: block;
-    border: #D9D9D9 solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #D9D9D9 solid 0.1rem;
     border-radius: 25px;
     height: 50px;
-    width: 134px;
     padding: 4px, 19px, 4px, 19px;
     margin: 0 15px 0 15px;
 }
 
+.filtre > i {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.filtre > span {
+    padding-right: 1rem;
+}
+
+.info-nombre-logements {
+    display: flex;
+    align-items: center;
+}
+
+.fa-info {
+    border: #D9D9D9 solid 1px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    line-height: 100%;
+    margin-right: 0.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.champ-recherche-ville {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0 1rem 0;
+    align-items: center; 
+    border-radius: 1rem;
+    width: 23rem;
+}
+
+.localisation {
+    width: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #F2F2F2;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.submit-city-search, .field-city-search {
+    margin: 0;
+    border: none;
+    height: 3rem;
+}
+
+.field-city-search {
+    border-top: #F2F2F2 solid 0.05rem;
+    border-bottom: #F2F2F2 solid 0.05rem;
+}
+
+.submit-city-search {
+    background-color: #0065FC;
+    border: solid 0.1rem #0065FC;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem 0 1rem;
+}
+
+.filtres {
+    font-size: 1.1rem;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
