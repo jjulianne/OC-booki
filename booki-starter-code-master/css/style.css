@@ -1,3 +1,20 @@
+/****** Font-sizes ***********/
+html {
+  font-size: 16px;
+}
+
+.filtres-btns-fontsize {
+  font-size: 1,0625rem;
+}
+
+.fontsize-bigger {
+  font-size: 1.125rem;
+}
+
+.fontsize-smaller {
+  font-size: 0.875rem;
+}
+
 /****** General ***********/
 * {
   font-family: "Raleway", sans-serif;
@@ -45,7 +62,7 @@ ul {
 
 .section-title {
   margin: 0.75rem 0 1.5rem 0;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .card {
@@ -120,10 +137,10 @@ nav {
   padding-top: 0.5rem;
 }
 
-.hidden {
-  display: none;
+.nav-text:hover {
+  border-top: #0065fc solid 0.1rem;
+  color: #0065fc;
 }
-
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
   display: flex;
@@ -134,7 +151,6 @@ nav {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 1.5rem;
-  padding-bottom: 0;
   box-sizing: border-box;
 }
 
@@ -214,6 +230,7 @@ nav {
   height: 40px;
   padding: 4px;
   margin: 0 0 0 15px;
+  font-weight: 700;
 }
 
 .filtre:hover {
@@ -384,14 +401,39 @@ footer li {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/* Large and Medium devices (desktop and tablets, more/equal to 768px) */
+@media (min-width: 767.99px) {
+  .filtres-container {
+    flex-direction: column;
+  }
+
+  .submit-city-search-mobile {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, less/equal to 1024px) */
 @media (max-width: 1024px) {
+  .nav-text:active {
+    border-top: #0065fc solid 0.1rem;
+    color: #0065fc;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
 
   .hebergements {
     width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hebergements .card {
+    height: 10rem;
+  }
+
+  .hebergements .card img {
+    height: 55%;
   }
 
   .populaires {
@@ -415,17 +457,12 @@ footer li {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
-}
-
-@media (min-width: 767.99px) {
-  .submit-city-search-mobile {
-    display: none;
+  
+  .herbergements {
+    padding-bottom: 2rem;
   }
 
-  .nav-text:hover {
-    border-top: #0065fc solid 0.1rem;
-    color: #0065fc;
-  }
+
 }
 
 /* Small devices (phones, less than 768px) */
@@ -464,7 +501,7 @@ footer li {
     margin: 0;
   }
 
-  .nav-text:hover, .nav-text:active {
+  .nav-text:active {
     border-bottom: #0065fc solid 0.1rem;
     color: #0065fc;
   }
@@ -491,10 +528,6 @@ footer li {
     padding: 0 1rem 0 1rem;
     height: 3.25rem;
     box-shadow: 0px 4px 4px 0px #00000040;
-  }
-
-  .filtres-container {
-    flex-direction: column;
   }
 
   .filtres-detail {
