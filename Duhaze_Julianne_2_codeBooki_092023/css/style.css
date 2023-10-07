@@ -131,7 +131,7 @@ nav {
 }
 
 .nav-text {
-  padding-top: 0.875rem;
+  padding: 0.875rem;
 }
 
 .logo {
@@ -140,8 +140,8 @@ nav {
 
 
 .nav-text:hover {
-  border-top: #0065fc solid 0.125rem;
-  color: #0065fc;
+  border-top: var(--main-color) solid 0.125rem;
+  color: var(--main-color);
 }
 
 .spacing {
@@ -193,7 +193,7 @@ nav {
 }
 
 .field-city-search {
-  border: #f2f2f2 solid 1px;
+  border: var(--filter-bg-color) solid 1px;
   border-left: none;
   border-right: none;
   padding-left: 0.75rem;
@@ -203,7 +203,7 @@ nav {
 }
 
 .submit-city-search {
-  background-color: #0065fc;
+  background-color: var(--main-color);
   border: none;
   color: white;
   text-align: center;
@@ -236,7 +236,7 @@ nav {
   padding: 4px;
   margin: 0 0 0 15px;
   font-weight: 700;
-  font-size: 1,0625rem;
+  font-size: 1.0625rem;
 }
 
 .filtre:hover {
@@ -408,10 +408,6 @@ footer li {
 /****** Media queries ***********/
 /* Large and Medium devices (desktop and tablets, more/equal to 768px) */
 @media (min-width: 767.99px) {
-  .filtres-container {
-    flex-direction: column;
-  }
-
   .submit-city-search-mobile {
     display: none;
   }
@@ -420,7 +416,7 @@ footer li {
 /* Medium devices (tablets, less/equal to 1080px) */
 @media (max-width: 1081px) {
   .nav-text:active {
-    border-top: #0065fc solid 0.1rem;
+    border-top: #0065fc solid 0.15rem;
     color: #0065fc;
   }
 
@@ -428,6 +424,11 @@ footer li {
     border-top : none;
     color: black;
   }
+
+  .filtres-container {
+    flex-direction: column;
+  }
+
 
   .filtre {
     font-size: 1rem;
@@ -464,7 +465,7 @@ footer li {
     width: 30%;
   }
   
-  .herbergements {
+  .hebergements {
     padding-bottom: 2rem;
   }
 
@@ -481,8 +482,6 @@ footer li {
     margin-right : 12rem;
     width: 100%;
   }
-
-
 }
 
 /* Small devices (phones, less than 768px) */
@@ -515,18 +514,23 @@ footer li {
     width: 100%;
   }
 
+  .spacing {
+    display: none;
+  }
+
   .nav-text {
     border-top: none;
     border-bottom: var(--main-bg-color) solid 2px;
     padding-bottom: 1rem;
-    font-size: 1,1875rem;
+    font-size: 1.1875rem;
     width: 50%;
     text-align: center;
     margin: 0;
   }
 
   .nav-text:active {
-    border-bottom: #0065fc solid 0.1rem;
+    border-top: none;
+    border-bottom: #0065fc solid 0.2rem;
     color: #0065fc;
   }
 
@@ -559,6 +563,10 @@ footer li {
     font-size: var(--smaller-font-size);
   }
 
+  .filtre:active {
+    background-color: #deebff;
+  }
+
   .form-city-search {
     width: 95%;
     justify-content: center;
@@ -574,6 +582,7 @@ footer li {
 
   .hebergements-and-populaires section {
     border-radius: 0%;
+    background-color: white;
   }
 
   .hebergements-and-populaires section:nth-child(2) {
@@ -582,7 +591,10 @@ footer li {
 
   .hebergements-and-populaires section:nth-child(1) {
     order: 2;
-    background-color: white;
+  }
+
+  .hebergements-and-populaires .populaires {
+    background-color: var(--main-bg-color);
   }
 
   .hebergements-cards, .populaires-cards {
