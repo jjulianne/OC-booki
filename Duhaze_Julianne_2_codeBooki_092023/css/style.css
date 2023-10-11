@@ -434,6 +434,10 @@ footer li {
     font-size: 1rem;
   }
 
+  .filtre:active {
+    background-color: #deebff;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -561,10 +565,6 @@ footer li {
     width: 40%;
     margin-bottom: 1rem;
     font-size: var(--smaller-font-size);
-  }
-
-  .filtre:active {
-    background-color: #deebff;
   }
 
   .form-city-search {
